@@ -1,0 +1,168 @@
+:root {
+    /* cursors */
+    --default: url('./global/assets/images/cursors/normal.png'), default;
+    --pointer: url('./global/assets/images/cursors/link.png'), pointer;
+    --text: url('./global/assets/images/cursors/text.png'), text;
+    --not-allowed: url('./global/assets/images/cursors/unavailable.png'), not-allowed;
+
+    /* colors */
+    --white: #FFFFFF;
+    --75-white: #BBBBBB;
+    --7E-white: #7E7E80;
+    --50-white: #777777;
+    --40-white: #404040;
+    --33-white: #333333;
+    --16-white: #161616;
+    --black: #000000;
+
+    --border-size: 2px;
+    --border: var(--border-size) solid var(--white);
+}
+
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: "Consolas", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+}
+
+::selection {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+
+* {
+    cursor: var(--default);
+}
+
+a,
+a * {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: var(--pointer);
+}
+
+textarea, input, select, option {
+    cursor: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 0.75;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    object-fit: contain;
+}
+
+
+.white-button {
+    background-color: var(--white);
+    border: none;
+    color: var(--black);
+    font-family: "Pixel Operator HB SC", sans-serif;
+    font-size: 20pt;
+    width: fit-content;
+    height: fit-content;
+    cursor: var(--pointer);
+}
+
+.white-button:hover {
+    background-color: var(--50-white);
+}
+
+.white-button:active,
+.white-button.disabled {
+    background-color: var(--33-white);
+    transform: translateY(1px);
+}
+
+.white-button.disabled {
+    cursor: var(--default);
+}
+
+.coming-soon-main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.coming-soon-main-container img {
+    opacity: 10%;
+    max-width: 50vw;
+    height: 50vh;
+    aspect-ratio: 1;
+    object-fit: contain;
+    position: absolute;
+    z-index: -1;
+}
+
+.coming-soon-main-container h1,
+.coming-soon-main-container h2 {
+    text-align: center;
+    max-width: 75vw;
+}
+
+.coming-soon-main-container h1 {
+    font-family: "Pixel Operator HB SC", sans-serif;
+    font-size: 10vh;
+}
+
+.coming-soon-main-container h2 {
+    color: var(--50-white);
+    font-family: "Pixel Operator Mono", sans-serif;
+    font-size: 4vh;
+    min-height: 4vh;
+}
+
+.coming-soon-socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.coming-soon-socials-container a {
+    width: 32px;
+}
+
+.coming-soon-socials-container a svg {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
